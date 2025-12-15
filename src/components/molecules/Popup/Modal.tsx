@@ -56,7 +56,7 @@ const Modal = ({ isOpen, onClose, status, message }: ModalProps) => {
             {(status === 'success' || status === 'error') && (
               <button
                 onClick={onClose}
-                className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+                className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors primary-button-shadow"
               >
                 {status === 'success' ? (
                   <a href="/">Back to Home</a>

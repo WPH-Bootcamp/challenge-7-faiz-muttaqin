@@ -239,8 +239,8 @@ export const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                            <Button type="submit" className="w-full py-4 rounded-full font-large">
-                                Send Message
+                            <Button type="submit" className="w-full py-4 rounded-full font-large primary-button-shadow">
+                                Send
                             </Button>
                         </form>
                     </div>
