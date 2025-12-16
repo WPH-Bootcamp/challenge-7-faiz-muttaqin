@@ -9,7 +9,6 @@ import Modal from '@/components/molecules/Popup/Modal';
 type FormData = {
     name: string;
     email: string;
-    subject: string;
     message: string;
     services: string[];
 }
@@ -26,7 +25,6 @@ export const Contact = () => {
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
-        subject: '',
         message: '',
         services: [],
     });
@@ -70,7 +68,7 @@ export const Contact = () => {
         // Simulate API call with random success/error
         setTimeout(() => {
             const isSuccess = Math.random() > 0.3; // 70% success rate, 30% error rate
-            
+
             if (isSuccess) {
                 setStatus({
                     type: 'success',
@@ -79,7 +77,6 @@ export const Contact = () => {
                 setFormData({
                     name: '',
                     email: '',
-                    subject: '',
                     message: '',
                     services: [],
                 });
@@ -118,35 +115,45 @@ export const Contact = () => {
                             onSubmit={handleSubmit}
                             className="p-8"
                         >
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div className="mb-5">
+                                <label
+                                    htmlFor="name"
+                                    className="text-sm font-bold text-[#0A0D12] dark:text-[#FDFDFD] mb-3 "
+                                >
+                                    Name
+                                </label>
                                 <Input
                                     type="text"
                                     name="name"
-                                    placeholder="Your Name"
+                                    placeholder="Enter Your Name"
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
                                 />
+                            </div>
+                            <div className="mb-5">
+                                <label
+                                    htmlFor="email"
+                                    className="text-sm font-bold text-[#0A0D12] dark:text-[#FDFDFD] mb-3 cursor-pointer"
+                                >
+                                    Email
+                                </label>
                                 <Input
                                     type="email"
                                     name="email"
-                                    placeholder="Your Email"
+                                    placeholder="Enter Your Email"
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
                                 />
                             </div>
-                            <div className="mb-6">
-                                <Input
-                                    type="text"
-                                    name="subject"
-                                    placeholder="Subject"
-                                    value={formData.subject}
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
-                            <div className="mb-6">
+                            <div className="mb-5">
+                                <label
+                                    htmlFor="message"
+                                    className="text-sm font-bold text-[#0A0D12] dark:text-[#FDFDFD] mb-3 cursor-pointer"
+                                >
+                                    Message
+                                </label>
                                 <Textarea
                                     name="message"
                                     placeholder="Your Message"
@@ -154,10 +161,11 @@ export const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     rows={6}
+                                    className='h-25'
                                 />
                             </div>
-                            <div className="mb-6">
-                                <label className="block text-sm font-medium mb-4">Services</label>
+                            <div className="mb-5">
+                                <label className="block text-sm font-bold text-[#0A0D12] dark:text-[#FDFDFD] mb-3 ">Services</label>
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="flex items-center space-x-3">
                                         <Checkbox
