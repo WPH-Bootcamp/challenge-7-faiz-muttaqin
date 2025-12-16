@@ -43,7 +43,7 @@ export const BrandCarousel = () => {
             <p className="text-gray-800 dark:text-gray-400 mb-20 font-bold text-2xl">
                 Trusted by global innovators and Leading Brands
             </p>
-            <div className="overflow-hidden">
+            <div className="relative overflow-hidden">
                 <div
                     ref={scrollRef}
                     className="flex gap-12 items-center overflow-x-hidden"
@@ -54,10 +54,12 @@ export const BrandCarousel = () => {
                             key={`${brand.name}-${index}`}
                             src={brand.logo}
                             alt={brand.name}
-                            className="h-10 opacity-70 grayscale-100 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0"
+                            className="h-15 opacity-70 grayscale-100 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0"
                         />
                     ))}
                 </div>
+                <div className='absolute left-0 top-0 h-full rounded-sm border-0 w-1/9 md:w-1/5 bg-gradient-to-r from-white to-transparent dark:from-black dark:to-black/0'></div>
+                <div className='absolute right-0 top-0 h-full rounded-sm border-0 w-1/9 md:w-1/5 bg-gradient-to-l from-white to-transparent dark:from-black dark:to-black/0'></div>
             </div>
         </div>
     );

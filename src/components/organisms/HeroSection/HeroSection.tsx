@@ -118,6 +118,7 @@ export const HeroSection = () => {
                     </div>
                 </div>
 
+            </div>
                 {/* Brand Carousel */}
                 <div
                     className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
@@ -125,8 +126,8 @@ export const HeroSection = () => {
                     style={{ transitionDelay: '1200ms' }}
                 >
                     <BrandCarousel />
+                    
                 </div>
-            </div>
         </section>
     );
 };
