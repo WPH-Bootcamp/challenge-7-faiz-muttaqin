@@ -37,7 +37,7 @@ export const ProcessStep = ({
                     <div className="order-3 flex-grow md:order-1 md:w-1/2 text-right animate-on-scroll fade-left" style={{ animationDelay: `${delay}ms` }}>
                         <div
                             ref={ref}
-                            className={`flex bg-white dark:bg-gray-900/40 border border-gray-200 dark:border-gray-900 rounded-xl p-6 relative group hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 ${
+                            className={`flex bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] rounded-xl p-6 relative group hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 ${
                                 isVisible ? 'opacity-100' : 'opacity-0'
                             }`}
                             onMouseEnter={handleMouseEnter}
@@ -95,7 +95,7 @@ export const ProcessStep = ({
                     <div className="flex-grow w-1/2 animate-on-scroll fade-right" style={{ animationDelay: `${delay}ms` }}>
                         <div
                             ref={ref}
-                            className={`flex bg-white dark:bg-gray-900/40 border border-gray-200 dark:border-gray-900 rounded-xl p-6 relative group hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 ${
+                            className={`flex bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] rounded-xl p-6 relative group hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 ${
                                 isVisible ? 'opacity-100' : 'opacity-0'
                             }`}
                             onMouseEnter={handleMouseEnter}

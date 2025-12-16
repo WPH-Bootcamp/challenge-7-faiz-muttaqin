@@ -31,10 +31,10 @@ export const HeroSection = () => {
                         </div>
 
                         <h1
-                            className={`hero-element text-5xl md:text-6xl font-bold text-gray-900 dark:text-white transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-8 blur-md'}`}
+                            className={`hero-element text-4xl md:text-5xl font-bold text-gray-900 dark:text-white transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-8 blur-md'}`}
                             style={{ transitionDelay: '400ms' }}
                         >
-                            Your Tech Partner for{' '}
+                            <span>Your Tech Partner for </span><br />
                             <span className="text-orange-500">Smarter Growth</span>
                         </h1>
 
@@ -43,9 +43,7 @@ export const HeroSection = () => {
                                 }`}
                             style={{ transitionDelay: '600ms' }}
                         >
-                            We bring your ideas to solutions to help you grow with speed and
-                            precision. Let us handle the tech, so you can focus on what you do
-                            best!
+                            We deliver tailored IT solutions to help you scale with speed and confidence.
                         </p>
 
                         <div

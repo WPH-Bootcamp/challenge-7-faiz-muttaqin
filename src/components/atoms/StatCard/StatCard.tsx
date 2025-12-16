@@ -14,7 +14,7 @@ export const StatCard = ({ value, label, delay = 0 }: StatCardProps) => {
     return (
         <div
             ref={ref}
-            className={`flex flex-col justify-center rounded-full bg-neutral-50 dark:bg-neutral-950 w-60 h-60 border-2 border-neutral-100 dark:border-neutral-900  text-center transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`flex flex-col justify-center rounded-full bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] w-60 h-60 text-center transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: `${delay}ms` }}
         >
             <div className="text-5xl font-bold text-orange-500 mb-2">{value}</div>

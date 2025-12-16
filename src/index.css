@@ -12,38 +12,6 @@ body {
 	font-family: "Quicksand", sans-serif;
 }
 
-/* Solution Card Hover */
-.solution-card:hover {
-	border-color: #dca124;
-}
-
-/* Brand Logo Effects */
-.brand-logo {
-	filter: grayscale(100%);
-	transition: filter 0.3s ease, opacity 0.3s ease;
-	opacity: 0.7;
-}
-
-.brand-logo:hover {
-	filter: grayscale(0%);
-	opacity: 1;
-}
-
-/* Float Animation */
-.animate-float {
-	animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-20px);
-	}
-}
-
 /* Spinner */
 .spinner {
 	border: 3px solid #f3f3f3;
@@ -107,106 +75,50 @@ body {
 	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Custom Checkbox/Radio Styles */
-@supports (-webkit-appearance: none) or (-moz-appearance: none) {
-	input[type="checkbox"],
-	input[type="radio"] {
-		--active: #f97316;
-		--active-inner: #fff;
-		--focus: 2px rgba(254, 161, 39, 0.3);
-		--border: #e37222;
-		--border-hover: #ffa564;
-		--background: transparent;
-		--disabled: #f6f8ff;
-		--disabled-inner: #e1e6f9;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		height: 21px;
-		outline: none;
-		display: inline-block;
-		vertical-align: top;
-		position: relative;
-		margin: 0;
-		cursor: pointer;
-		border: 1px solid var(--border);
-		background: var(--background);
-		transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
-	}
-
-	input[type="checkbox"]:after,
-	input[type="radio"]:after {
-		content: "";
-		display: block;
-		left: 0;
-		top: 0;
-		position: absolute;
-		transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
-			opacity var(--d-o, 0.2s);
-	}
-
-	input[type="checkbox"]:checked,
-	input[type="radio"]:checked {
-		--background: var(--active);
-		--border: var(--active);
-	}
-
-	input[type="checkbox"]:disabled,
-	input[type="radio"]:disabled {
-		--background: var(--disabled);
-		cursor: not-allowed;
-		opacity: 0.9;
-	}
-
-	input[type="checkbox"]:disabled:checked,
-	input[type="radio"]:disabled:checked {
-		--background: var(--disabled-inner);
-	}
-
-	input[type="checkbox"]:focus,
-	input[type="radio"]:focus {
-		box-shadow: 0 0 0 var(--focus);
-	}
-
-	input[type="checkbox"] {
-		width: 21px;
-		border-radius: 7px;
-	}
-
-	input[type="checkbox"]:after {
-		width: 5px;
-		height: 9px;
-		border: 2px solid var(--active-inner);
-		border-top: 0;
-		border-left: 0;
-		left: 7px;
-		top: 4px;
-		transform: rotate(20deg);
-	}
-
-	input[type="checkbox"]:checked:after {
-		transform: rotate(43deg);
-	}
-
-	input[type="radio"] {
-		border-radius: 50%;
-		width: 21px;
-	}
-
-	input[type="radio"]:after {
-		width: 19px;
-		height: 19px;
-		border-radius: 50%;
-		background: var(--active-inner);
-		opacity: 0;
-		transform: scale(0.7);
-	}
-
-	input[type="radio"]:checked:after {
-		opacity: 1;
-		transform: scale(0.5);
-	}
+/* Glow Border Effect with Gradient */
+.glow-border-gradient {
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
 }
+
+.glow-border-gradient::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	padding: 1.2px;
+	background: radial-gradient(
+		300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(255, 108, 55, 1),
+		rgba(255, 107, 53, 0.6) 25%,
+		rgba(255, 107, 53, 0.2) 50%,
+		transparent 65%
+	);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+}
+
+.glow-border-gradient::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	/* background: radial-gradient(
+		250px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(255, 107, 53, 0.3),
+		rgba(255, 107, 53, 0.15) 30%,
+		rgba(255, 107, 53, 0.05) 50%,
+		transparent 70%
+	); */
+	pointer-events: none;
+}
+/* Glow Border Effect : End */
+
+/* Primary Button Shadow Effect */
 .primary-button-shadow {
 	box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.4);
 	transition: box-shadow 150ms ease;
