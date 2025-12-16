@@ -7,33 +7,31 @@ const faqData = [
     {
         question: 'What services do you offer?',
         answer:
-            'We offer a comprehensive range of IT solutions including web development, mobile app development, UI/UX design, cloud solutions, cybersecurity, and ongoing maintenance & support.',
+            'We provide custom web/app development, cloud solutions, UX/UI design, and more.',
     },
     {
         question: 'How do I know if now is the right time for my business?',
         answer:
-            'If you`re experiencing growth challenges, need to modernize your technology stack, or want to improve operational efficiency, now is the perfect time to invest in technology solutions.',
+            'Book a free consult — we’ll assess your goals and recommend the right approach.',
     },
     {
         question: 'How much does a project cost?',
         answer:
-            'Project costs vary based on scope, complexity, and requirements. We provide transparent pricing after understanding your specific needs during our consultation phase.',
+            'Every project is different. Let’s talk about your needs to get a tailored estimate.',
     },
     {
         question: 'How long does it take?',
         answer:
-            'Timeline depends on project complexity. A simple website might take 4-6 weeks, while a complex enterprise application could take 3-6 months. We provide detailed timelines during planning.',
+            'Depends on scope — but we always prioritize quality and deadlines.',
     },
     {
         question: 'Can I start with a small project first?',
         answer:
-            'Absolutely! We welcome projects of all sizes and can start with a pilot project or MVP to demonstrate value before scaling up.',
+            'Absolutely. We often begin with MVPs or pilot projects.',
     },
 ];
 
 export const FAQ = () => {
-    // const ref = useRef<HTMLDivElement>(null);
-    // const isVisible = useScrollAnimation(ref);
 
     return (
         <section id="faq" className="py-16 bg-white dark:bg-black">
