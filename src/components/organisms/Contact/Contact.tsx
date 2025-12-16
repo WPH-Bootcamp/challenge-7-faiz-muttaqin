@@ -18,6 +18,15 @@ type FormStatus = {
     message: string;
 }
 
+const serviceOptions = [
+    { id: 'web-development', label: 'Web Development' },
+    { id: 'cloud-solutions', label: 'Cloud Solutions' },
+    { id: 'mobile-development', label: 'Mobile App Development' },
+    { id: 'software-development', label: 'Software Development' },
+    { id: 'ui-ux-design', label: 'UI/UX Design' },
+    { id: 'other', label: 'Other' },
+];
+
 export const Contact = () => {
     const ref = useRef<HTMLDivElement>(null);
     const isVisible = useScrollAnimation(ref);
@@ -167,84 +176,21 @@ export const Contact = () => {
                             <div className="mb-5">
                                 <label className="block text-sm font-bold text-[#0A0D12] dark:text-[#FDFDFD] mb-3 ">Services</label>
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="flex items-center space-x-3">
-                                        <Checkbox
-                                            id="web-development"
-                                            checked={formData.services.includes('web-development')}
-                                            onCheckedChange={() => handleCheckboxChange('web-development')}
-                                        />
-                                        <label
-                                            htmlFor="web-development"
-                                            className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
-                                        >
-                                            Web Development
-                                        </label>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <Checkbox
-                                            id="cloud-solutions"
-                                            checked={formData.services.includes('cloud-solutions')}
-                                            onCheckedChange={() => handleCheckboxChange('cloud-solutions')}
-                                        />
-                                        <label
-                                            htmlFor="cloud-solutions"
-                                            className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
-                                        >
-                                            Cloud Solutions
-                                        </label>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <Checkbox
-                                            id="mobile-development"
-                                            checked={formData.services.includes('mobile-development')}
-                                            onCheckedChange={() => handleCheckboxChange('mobile-development')}
-                                        />
-                                        <label
-                                            htmlFor="mobile-development"
-                                            className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
-                                        >
-                                            Mobile App Development
-                                        </label>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <Checkbox
-                                            id="software-development"
-                                            checked={formData.services.includes('software-development')}
-                                            onCheckedChange={() => handleCheckboxChange('software-development')}
-                                        />
-                                        <label
-                                            htmlFor="software-development"
-                                            className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
-                                        >
-                                            Software Development
-                                        </label>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <Checkbox
-                                            id="ui-ux-design"
-                                            checked={formData.services.includes('ui-ux-design')}
-                                            onCheckedChange={() => handleCheckboxChange('ui-ux-design')}
-                                        />
-                                        <label
-                                            htmlFor="ui-ux-design"
-                                            className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
-                                        >
-                                            UI/UX Design
-                                        </label>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <Checkbox
-                                            id="other"
-                                            checked={formData.services.includes('other')}
-                                            onCheckedChange={() => handleCheckboxChange('other')}
-                                        />
-                                        <label
-                                            htmlFor="other"
-                                            className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
-                                        >
-                                            Other
-                                        </label>
-                                    </div>
+                                    {serviceOptions.map((service) => (
+                                        <div key={service.id} className="flex items-center space-x-3">
+                                            <Checkbox
+                                                id={service.id}
+                                                checked={formData.services.includes(service.id)}
+                                                onCheckedChange={() => handleCheckboxChange(service.id)}
+                                            />
+                                            <label
+                                                htmlFor={service.id}
+                                                className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
+                                            >
+                                                {service.label}
+                                            </label>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                             <Button type="submit" className="w-full py-4 rounded-full font-large primary-button-shadow">
