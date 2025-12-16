@@ -3,10 +3,10 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { StatCard } from '@/components/atoms/StatCard';
 
 const stats = [
-    { value: '50+', label: 'Projects Launched' },
-    { value: '5+', label: 'Years of Experience' },
-    { value: '10+', label: 'Industry Awards Won' },
-    { value: '100%', label: 'Client Satisfaction Rate' },
+    { value: 50, valueMark: '+', label: 'Projects Launched' },
+    { value: 5, valueMark: '+', label: 'Years of Experience' },
+    { value: 10, valueMark: '+', label: 'Industry Awards Won' },
+    { value: 100, valueMark: '%', label: 'Client Satisfaction Rate' },
 ];
 
 export const Statistics = () => {
@@ -34,6 +34,7 @@ export const Statistics = () => {
                         <StatCard
                             key={index}
                             value={stat.value}
+                            valueMark={stat.valueMark}
                             label={stat.label}
                             delay={index * 100}
                         />
