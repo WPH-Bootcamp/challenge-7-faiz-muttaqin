@@ -98,7 +98,7 @@ export const Testimonials = () => {
                             {testimonials.map((testimonial, index) => (
                                 <CarouselItem key={index} className="basis-1/1 md:basis-1/2 lg:basis-1/3">
                                     <div className="py-8 h-full">
-                                        <div className="relative flex flex-col items-center bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:border-orange-500 transition-colors duration-300 rounded-2xl p-8 text-center h-full pb-16">
+                                        <div className="relative flex flex-col items-center bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:border-orange-500 dark:hover:border-orange-500 transition-colors duration-300 rounded-2xl p-8 text-center h-full pb-16">
                                             {/* Quote Icon */}
                                             <img
                                                 src="/img/icon-quote.svg"
@@ -144,8 +144,8 @@ export const Testimonials = () => {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="left-0 h-full rounded-sm border-0 w-1/6 md:w-1/3 bg-gradient-to-r from-white to-transparent hover:bg-transparent dark:bg-gradient-to-r dark:from-black dark:to-black/0 dark:hover:bg-transparent [&>svg]:hidden" />
-                        <CarouselNext className="right-0 h-full rounded-sm border-0 w-1/6 md:w-1/3 bg-gradient-to-l from-white to-transparent hover:bg-transparent dark:bg-gradient-to-l dark:from-black dark:to-black/0 dark:hover:bg-transparent [&>svg]:hidden" />
+                        <CarouselPrevious className="left-0 h-full rounded-sm border-0 w-1/6 md:w-1/3 bg-gradient-to-r from-white to-transparent hover:bg-transparent hover:from-transparent dark:bg-gradient-to-r dark:from-black dark:to-black/0 dark:hover:bg-transparent [&>svg]:hidden" />
+                        <CarouselNext className="right-0 h-full rounded-sm border-0 w-1/6 md:w-1/3 bg-gradient-to-l from-white to-transparent hover:bg-transparent hover:from-transparent dark:bg-gradient-to-l dark:from-black dark:to-black/0 dark:hover:bg-transparent [&>svg]:hidden" />
 
                     </Carousel>
                     
